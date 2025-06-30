@@ -1,0 +1,89 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Virtual environment
+.env
+.env.*
+
+# Poetry
+poetry.lock
+# (opcional) si quieres ignorar el lock file en equipo con distintos entornos
+
+# VSCode settings
+.vscode/
+*.code-workspace
+
+# Distribution / packaging
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+.pytest_cache/
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+
+# Django stuff:
+*.log
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# pyre
+.pyre/
+
+# Docker
+**/__pycache__/
+*.pyc
+Dockerfile
+docker-compose*.yml
+*.log
+
+# FastAPI openapi docs cache (si generas)
+openapi.json
+docs/openapi*
+
+# IDEs
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Local dev DBs
+*.sqlite3
+
+# Jupyter
+.ipynb_checkpoints/
+
+# System
+.DS_Store
+Thumbs.db
