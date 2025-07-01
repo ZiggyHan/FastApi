@@ -1,10 +1,10 @@
 Proyecto prueba - FINVERO
 
 Activar entorno virtual:
-.\venv\Scripts\Activate
+poetry shell
 
 
 Ejecutar proyecto:
-uvicorn main:app --reload
+poetry run uvicorn main:app --reload
 
 Actualmente la URL de conexion al sandbox de belvo no funciona
