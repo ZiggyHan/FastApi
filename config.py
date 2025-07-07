@@ -16,10 +16,12 @@ class Settings(BaseSettings):
     SWAGGER_PASS: str = "admin_password"
 
     # Database Configuration
+    MONGO_URI: str = "mongodb://localhost:27017"
+    MONGO_DB: str = "APIS"
+    MONGO_USERS_COLLECTION: str = "users"
+    MONGO_POKEMON_COLLECTION: str = "pokemon"
 
     # External API Configuration
-    BELVO_API_URL: str = "https://sandbox.belvo.com/api/transactions/?page_size=100&link=acc5ba41-e462-4156-a7c7-382a725e76b6"
-    BELVO_KEY: str = "Basic MmIxNWJhODgtYTE4NS00ODU1LWEyMDEtNmRmMWZhZDVmNTYwOmhZbVRjMS1FdlNiQFpzcGtHbU5OVVRVI2VlYVN5SWJITy1MZjRQUVBHWkE4S2ZtVnRCSGlEWWMwc2gwZDJQKnI="
     POKEMON_API_URL: str = "https://pokeapi.co/api/v2/pokemon/ditto"
 
     model_config = SettingsConfigDict(env_file=".env", extra="allow")

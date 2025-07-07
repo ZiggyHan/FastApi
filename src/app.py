@@ -12,6 +12,8 @@ from src.utils.error_handler import (
     http_exception_handler,
     validation_error_handler
 )
+from pymongo.errors import ConnectionFailure
+from src.database.mongodb import MongoDBConnection
 
 
 settings = Settings()
@@ -22,7 +24,16 @@ logger = get_logger(__name__, settings.LOG_LEVEL)
 @asynccontextmanager
 async def lifespan(_app: FastAPI):
     logger.debug("on load lifespan")
+    try:
+        mongo_conn = MongoDBConnection(settings.MONGO_URI)
+        mongo_conn.client.server_info()
+        logger.info("✅ MongoDB connected successfully")
+    except ConnectionFailure as e:
+        logger.error(f"❌ MongoDB connection failed: {e}")
+        raise RuntimeError("MongoDB connection failed. Stopping app.")
+
     yield
+
     logger.debug("on end lifespan")
 
 
