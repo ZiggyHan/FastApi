@@ -22,6 +22,6 @@ class Settings(BaseSettings):
     MONGO_POKEMON_COLLECTION: str = "pokemon"
 
     # External API Configuration
-    POKEMON_API_URL: str = "https://pokeapi.co/api/v2/pokemon/ditto"
+    POKEMON_API_URL: str = "https://pokeapi.co/api/v2/pokemon"
 
     model_config = SettingsConfigDict(env_file=".env", extra="allow")
